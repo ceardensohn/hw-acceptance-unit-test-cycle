@@ -23,7 +23,7 @@ module NavigationHelpers
             path_components = $1.split(/\s+/)
             self.send(path_components.push('path').joing('_').to_sym)
           rescue NoMethodError, ArgumentError
-            raise "Can't find mapping from \"#{page_name}\" to a pth.\n"+"Now, go and add a mapping in #{__FILE__}"
+            raise "Can't find mapping from \"#{page_name}\" to a path.\n"+"Now, go and add a mapping in #{__FILE__}"
           end
         end
     end
