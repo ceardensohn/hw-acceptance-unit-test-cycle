@@ -17,7 +17,7 @@ describe MoviesController do
         it "should redirect to the home page if director isn't known" do
             Movie.stub(:similar_movies).with("No name").and_return(nil)
             get :search, { title: 'No name'}
-            expect(response).to redirect_to(movies_path)
+            expect(response).to redirect_to(movies_url)
         end
     end
 

@@ -12,6 +12,8 @@ module NavigationHelpers
           movie_path(movie_id)
         when /^the Similar Movies page for "(.+)"/
           search_similar_movies_path($1)
+        when /^the RottenPotatoes home page/
+          movies_path
 
 
 
